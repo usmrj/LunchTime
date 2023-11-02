@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('alternative_dishes_for_student', function (Blueprint $table) {
+        Schema::create('alternative_dishes_for_students', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('student_id');
             $table->foreign('student_id')

@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Classes extends Model
+class servedDish extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name'
+        'name',
     ];
 
     public function school(): BelongsTo
@@ -20,8 +20,8 @@ class Classes extends Model
         return $this->belongsTo(School::class, 'school_id');
     }
 
-    public function students(): HasMany
+    public function dishes(): HasMany
     {
-        return $this->hasMany(Student::class);
+        return $this->hasMany(Dish::class, 'dish_id');
     }
 }

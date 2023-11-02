@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\School;
+use App\Models\Student;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,8 +17,10 @@ use App\Models\School;
 
 Route::get('/', function () {
     $school = School::where('id', 1)->first();
+    $student = Student::where('id', 1)->first();
     return view('welcome', [
         'school' => $school,
-        'classes' => $school->classes
+        'classes' => $school->classes,
+        'student' => $student
     ]);
 });
