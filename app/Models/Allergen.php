@@ -18,9 +18,4 @@ class Allergen extends Model
     {
         return $this->belongsTo(StudentAllergy::class, 'allergen_id');
     }
-
-    public function dishAllergen(): BelongsTo
-    {
-        return $this->belongsTo(dishAllergen::class, 'dish_id');
-    }
 }
