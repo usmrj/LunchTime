@@ -12,12 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('school', function (Blueprint $table) {
-            $table->id('SchoolId');
-            $table->string('Name', 255);
-            $table->date('LunchBreakStart1');            
-            $table->date('LunchBreakEnd1');
-            $table->date('LunchBreakStart2');            
-            $table->date('LunchBreakEnd2');
+            $table->id('school_id');
+            $table->string('name', 255);
+            $table->date('lunch_break_start1');            
+            $table->date('lunch_break_end1');
+            $table->date('lunch_break_start2');            
+            $table->date('lunch_break_end2');
             $table->tinyInteger('HasDishesForSick');            
 
         });

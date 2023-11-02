@@ -12,15 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('dishes', function (Blueprint $table) {
-            $table->id('DishId');
-            $table->string('Name', 255);
-            $table->string('Ingr1', 255);
-            $table->string('Ingr2', 255);
-            $table->string('Ingr3', 255);
-            $table->string('Ingr4', 255);
-            $table->string('Ingr5', 255);
-            $table->tinyInteger('isSecond');
-            $table->tinyInteger('isAlternative');
+            $table->id('dish_id');
+            $table->string('name', 255);
+            $table->string('ingr1', 255);
+            $table->string('ingr2', 255);
+            $table->string('ingr3', 255);
+            $table->string('ingr4', 255);
+            $table->string('ingr5', 255);
+            $table->tinyInteger('IsSecond');
+            $table->tinyInteger('IsAlternative');
         });
     }
 

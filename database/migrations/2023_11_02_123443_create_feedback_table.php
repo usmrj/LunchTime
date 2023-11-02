@@ -13,14 +13,14 @@ return new class extends Migration
     {
         Schema::create('feedback', function (Blueprint $table) {
             $table->id();
-            $table->integer('Feedback');
-            $table->unsignedBigInteger('SchoolId');
-            $table->foreign('SchoolId')
-            ->references('SchoolId')
+            $table->integer('feedbaack_value');
+            $table->unsignedBigInteger('school_id');
+            $table->foreign('school_id')
+            ->references('school_id')
             ->on('school');
-            $table->unsignedBigInteger('DishId');
-            $table->foreign('DishId')
-            ->references('DishId')
+            $table->unsignedBigInteger('dish_id');
+            $table->foreign('dish_id')
+            ->references('dish_id')
             ->on('dishes');
             $table->timestamp('added_at');
         });

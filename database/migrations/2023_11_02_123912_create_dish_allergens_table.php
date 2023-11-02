@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('dish_allergens', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('DishId');
-            $table->foreign('DishId')
-            ->references('DishId')
+            $table->unsignedBigInteger('dish_id');
+            $table->foreign('dish_id')
+            ->references('dish_id')
             ->on('dishes');
-            $table->unsignedBigInteger('AllergenId');
-            $table->foreign('AllergenId')
-            ->references('AllergenId')
+            $table->unsignedBigInteger('allergen_id');
+            $table->foreign('allergen_id')
+            ->references('allergen_id')
             ->on('allergens');
         });
     }

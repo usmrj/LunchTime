@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('privilagedUsers', function (Blueprint $table) {
+        Schema::create('privilaged_users', function (Blueprint $table) {
             $table->id();
-            $table->string('Username', 255);
-            $table->string('Password', 255);
-            $table->unsignedBigInteger('SchoolId');
-            $table->foreign('SchoolId')
-            ->references('SchoolId')
+            $table->string('username', 255);
+            $table->string('password', 255);
+            $table->unsignedBigInteger('school_id');
+            $table->foreign('school_id')
+            ->references('school_id')
             ->on('school');
         });
     }

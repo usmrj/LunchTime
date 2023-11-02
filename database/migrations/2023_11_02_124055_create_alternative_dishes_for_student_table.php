@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('alternativeDishesForStudent', function (Blueprint $table) {
+        Schema::create('alternative_dishes_for_student', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('StudentId');
-            $table->foreign('StudentId')
-            ->references('StudentId')
+            $table->unsignedBigInteger('student_id');
+            $table->foreign('student_id')
+            ->references('student_id')
             ->on('students');
-            $table->unsignedBigInteger('DishId');
-            $table->foreign('DishId')
-            ->references('DishId')
+            $table->unsignedBigInteger('dish_id');
+            $table->foreign('dish_id')
+            ->references('dish_id')
             ->on('dishes');
         });
     }
