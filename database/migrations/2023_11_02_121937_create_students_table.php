@@ -12,19 +12,19 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('students', function (Blueprint $table) {
-            $table->id('student_id');
+            $table->id();
             $table->string('first_name', 255);
             $table->string('last_name', 255);
             $table->string('password', 255);
             $table->unsignedBigInteger('class_id');
             $table->foreign('class_id')
-            ->references('class_id')
+            ->references('id')
             ->on('classes');
             $table->integer('diary_number');
             $table->unsignedBigInteger('school_id');
             $table->foreign('school_id')
-            ->references('school_id')
-            ->on('school');
+            ->references('id')
+            ->on('schools');
             $table->tinyInteger('HaveVoted');
         });
     }

@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('school', function (Blueprint $table) {
-            $table->id('school_id');
+        Schema::create('schools', function (Blueprint $table) {
+            $table->id();
             $table->string('name', 255);
             $table->date('lunch_break_start1');            
             $table->date('lunch_break_end1');
