@@ -7,21 +7,21 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Classes extends Model
+class StudentAllergy extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
+    protected $fillable  = [
         'name'
     ];
 
     public function school(): BelongsTo
     {
-        return $this->belongsTo(School::class, 'school_id');
+        return $this->belongsTo(Student::class, 'student_id');
     }
 
-    public function students(): HasMany
+    public function allergies(): HasMany
     {
-        return $this->hasMany(Student::class);
+        return $this->hasMany(Allergen::class);
     }
 }

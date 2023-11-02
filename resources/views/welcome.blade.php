@@ -7,5 +7,8 @@
 </head>
 <body>
     <p class="mr-1">{{$classes[0]->name;}}</p>
+    <p class="mr-1">{{$school->students;}}</p>
+    <p class="mr-1">{{$student->allergies;}}</p>
+
 </body>
 </html>
