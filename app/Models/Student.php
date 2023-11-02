@@ -44,4 +44,9 @@ class Student extends Model
     {
         return $this->hasMany(AlternativeDishesForStudent::class);
     }
+
+    public function feedbacks(): HasMany
+    {
+        return $this->hasMany(Feedback::class);
+    }
 }

@@ -24,4 +24,9 @@ class Feedback extends Model
     {
         return $this->belongsTo(School::class, 'school_id');
     }
+
+    public function student(): BelongsTo
+    {
+        return $this->belongsTo(Student::class, 'student_id');
+    }
 }
