@@ -36,4 +36,9 @@ class Dish extends Model
     {
         return $this->hasMany(dishAllergen::class);
     }
+
+    public function school(): BelongsTo
+    {
+        return $this->belongsTo(School::class, 'school_id');
+    }
 }

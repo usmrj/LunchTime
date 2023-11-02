@@ -43,4 +43,9 @@ class School extends Model
     {
         return $this->hasMany(Feedback::class);
     }
+
+    public function dishes(): HasMany
+    {
+        return $this->hasMany(Dish::class);
+    }
 }

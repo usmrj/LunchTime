@@ -19,6 +19,10 @@ return new class extends Migration
             $table->string('ingr3', 255)->nullable();
             $table->string('ingr4', 255)->nullable();
             $table->string('ingr5', 255)->nullable();
+            $table->unsignedBigInteger('school_id');
+            $table->foreign('school_id')
+            ->references('id')
+            ->on('schools');
             $table->tinyInteger('IsSecond');
             $table->tinyInteger('IsAlternative');
         });

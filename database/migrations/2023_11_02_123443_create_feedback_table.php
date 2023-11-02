@@ -13,11 +13,15 @@ return new class extends Migration
     {
         Schema::create('feedback', function (Blueprint $table) {
             $table->id();
-            $table->integer('feedbaack_value');
+            $table->integer('feedback_value');
             $table->unsignedBigInteger('school_id');
             $table->foreign('school_id')
             ->references('id')
             ->on('schools');
+            $table->unsignedBigInteger('student_id');
+            $table->foreign('student_id')
+            ->references('id')
+            ->on('students');
             $table->unsignedBigInteger('dish_id');
             $table->foreign('dish_id')
             ->references('id')
