@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name', 255);
             $table->string('ingr1', 255);
-            $table->string('ingr2', 255);
-            $table->string('ingr3', 255);
-            $table->string('ingr4', 255);
-            $table->string('ingr5', 255);
+            $table->string('ingr2', 255)->nullable();
+            $table->string('ingr3', 255)->nullable();
+            $table->string('ingr4', 255)->nullable();
+            $table->string('ingr5', 255)->nullable();
             $table->tinyInteger('IsSecond');
             $table->tinyInteger('IsAlternative');
         });
