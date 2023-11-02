@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('dishes', function (Blueprint $table) {
             $table->id('DishId');
-            $table->string('DishName', 255);
-            $table->string('DishIngr1', 255);
-            $table->string('DishIngr2', 255);
-            $table->string('DishIngr3', 255);
-            $table->string('DishIngr4', 255);
-            $table->string('DishIngr5', 255);
+            $table->string('Name', 255);
+            $table->string('Ingr1', 255);
+            $table->string('Ingr2', 255);
+            $table->string('Ingr3', 255);
+            $table->string('Ingr4', 255);
+            $table->string('Ingr5', 255);
             $table->tinyInteger('isSecond');
             $table->tinyInteger('isAlternative');
         });
