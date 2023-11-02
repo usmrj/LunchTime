@@ -12,11 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('classes', function (Blueprint $table) {
-            $table->id('ClassId');
-            $table->string('Name', 255);
-            $table->unsignedBigInteger('SchoolId');
-            $table->foreign('SchoolId')
-            ->references('SchoolId')
+            $table->id('class_id');
+            $table->string('name', 255);
+            $table->unsignedBigInteger('school_id');
+            $table->foreign('school_id')
+            ->references('school_id')
             ->on('school');
         });
     }
