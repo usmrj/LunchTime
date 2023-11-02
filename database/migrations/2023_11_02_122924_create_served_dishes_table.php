@@ -16,12 +16,12 @@ return new class extends Migration
             $table->date('ServingDate');
             $table->unsignedBigInteger('dish_id');
             $table->foreign('dish_id')
-            ->references('dish_id')
+            ->references('id')
             ->on('dishes');         
             $table->unsignedBigInteger('school_id');   
             $table->foreign('school_id')
-            ->references('school_id')
-            ->on('school');
+            ->references('id')
+            ->on('schools');
             
         });
     }

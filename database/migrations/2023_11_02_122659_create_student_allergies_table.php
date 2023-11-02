@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('student_id');
             $table->foreign('student_id')
-            ->references('student_id')
+            ->references('id')
             ->on('students');
             $table->unsignedBigInteger('allergen_id');
             $table->foreign('allergen_id')
-            ->references('allergen_id')
+            ->references('id')
             ->on('allergens');
         });
     }
