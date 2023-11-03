@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('schools', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255);
-            $table->date('lunch_break_start1');          
-            $table->date('lunch_break_end1');
-            $table->date('lunch_break_start2');            
-            $table->date('lunch_break_end2');
+            $table->time('lunch_break_start1');          
+            $table->time('lunch_break_end1');
+            $table->time('lunch_break_start2');            
+            $table->time('lunch_break_end2');
             $table->tinyInteger('HasDishesForSick');            
 
         });

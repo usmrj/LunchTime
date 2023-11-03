@@ -10,5 +10,7 @@
     <p class="mr-1">{{$school->students;}}</p>
     <p class="mr-1">{{$student->allergies;}}</p>
 
+    @livewire('clicker')
+
 </body>
 </html>
