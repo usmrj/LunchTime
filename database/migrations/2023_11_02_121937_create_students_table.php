@@ -25,7 +25,7 @@ return new class extends Migration
             $table->foreign('school_id')
             ->references('id')
             ->on('schools');
-            $table->tinyInteger('parrent_password');
+            $table->string('parrent_password');
             $table->tinyInteger('HaveVoted');
         });
     }
