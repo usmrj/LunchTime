@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form action="{{ route('auth.login') }}" method="POST">
+    <form action="" method="POST">
         <input name="login" type="text" placeholder="login">
         <input name="password" type="text" placeholder="password">
         <input type="submit" value="Zaloguj">
