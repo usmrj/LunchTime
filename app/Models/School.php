@@ -36,7 +36,7 @@ class School extends Model
 
     public function previlagedUsers(): HasMany
     {
-        return $this->hasMany(PrevilagedUser::class);
+        return $this->hasMany(User::class);
     }
 
     public function dishFeedbacks(): HasMany
