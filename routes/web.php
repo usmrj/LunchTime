@@ -16,11 +16,5 @@ use App\Models\Student;
 */
 
 Route::get('/', function () {
-    $school = School::where('id', 1)->first();
-    $student = Student::where('id', 1)->first();
-    return view('welcome', [
-        'school' => $school,
-        'classes' => $school->classes,
-        'student' => $student
-    ]);
+    return view('login');
 });

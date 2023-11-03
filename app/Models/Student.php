@@ -49,4 +49,9 @@ class Student extends Model
     {
         return $this->hasMany(Feedback::class);
     }
+
+    public function studentRewards(): HasMany
+    {
+        return $this->hasMany(StudentReward::class);
+    }
 }
