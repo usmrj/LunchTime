@@ -9,7 +9,8 @@
 </head>
     @php
     if (str_contains(url()->current(), "login"))
-        dd("żółwik")
+    {
+    }
     @endphp 
 <body>
 <div class=" vh-100 w-100 background-grad overflow-y-hidden">
@@ -45,8 +46,12 @@
                 </div>
                 <div class="justify-content-center align-items-end  h-25 d-flex">
                     @section('left-bar-bottom')
-                        <a href="bajojjajo" class="fs-4 chg-color mb-5">Wyloguj</a>
-                    @show
+                        @auth
+                            <form action="{{ route('auth.logout') }}" method="POST">
+                                @csrf
+                                <input class="mb-5" type="submit" value="Wyloguj" />
+                            </form>
+                        @endauth
                 </div>
             </div>
             <div class="col-17 float-start vh-100 p-0 ">

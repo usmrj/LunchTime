@@ -1,12 +1,12 @@
-welcome you are logged in 
+@extends('main-layout')
 
 
-<div class="flex">
-    <h1>Witaj <strong>{{ Auth::user()->name }}</strong>!</h1>
-    <form action="{{ route('auth.logout') }}" method="POST">
-        @csrf
-        <div class="flex items-center justify-between">
-            <input type="submit" value="Wyloguj" />
-        </div>
-    </form>
-</div>
+@section('left-bar')
+@endsection
+@section('content')
+    <h1 class="text-white">Witaj <b>{{ Auth::user()->name }}</b>!</h1>
+@endsection
+
+@section('left-bar-bottom')
+
+@endsection
