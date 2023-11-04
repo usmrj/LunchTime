@@ -5,7 +5,8 @@
 @endsection
 @section('content')
     <div class="col-6 position-absolute mt-5 border h-75 border-4 rounded-5 border-main_color login-form-box">
-        <form action="" method="POST" class="">
+        <form action="{{ route('auth.login') }}" method="POST" class="">
+            @csrf
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-8 mx-auto justify-content-center d-flex chg-color fw-bold mt-5 fs-2" >

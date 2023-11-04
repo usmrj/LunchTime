@@ -36,7 +36,6 @@
                 </div>
                 <div class="justify-content-center align-items-end  h-25 d-flex">
                         @section('left-bar-bottom')
-                        <a href="bajojjajo" class="fs-4 chg-color mb-5">Wyloguj</a>
                         @show
                 </div>
             </div>
