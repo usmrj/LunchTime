@@ -2,8 +2,6 @@
 
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
-use App\Models\School;
-use App\Models\Student;
 
 /*
 |--------------------------------------------------------------------------

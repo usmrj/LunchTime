@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,10 @@
     @yield('head')
 @show
 </head>
-
+    @php
+    if (str_contains(url()->current(), "login"))
+        dd("żółwik")
+    @endphp 
 <body>
 <div class=" vh-100 w-100 background-grad overflow-y-hidden">
     <div class="container-fluid ">
@@ -16,27 +18,35 @@
             <div class="col-3 vh-100 left-bar">
                 <div class="col-20 h-25 align-items-start fs-2  mt-4 justify-content-center d-flex">
                     @section('left-bar-top')
-                    <p class="chg-color"> Admin</p>
+                        <p class="chg-color"> Admin</p>
                     @show
                 </div>
-                <div class="col-20 h-50 align-items-start d-flex">
-                    <div class="row">
-                        <a href="jajobajo">Statystyki</a>
-                    </div>
-                    <div class="dropdown-center row">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Centered dropdown
-                        </button>
-                        <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Action two</a></li>
-                          <li><a class="dropdown-item" href="#">Action three</a></li>
-                        </ul>
-                      </div>
+                <div class="col-20 h-50 container">
+                            <div class="row mb-5">
+                                <div class="col">
+                                    <span><a href="jajobajo" class="chg-color fs-3 ">Statystyki</a></span>
+                                </div>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col ">
+                                    <a href="jajobajo" class="col-20 chg-color fs-3">Użytkownicy</a>
+                                </div>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col">
+                                    <a href="jajobajo" class="col-20 chg-color fs-3">Menu</a>
+                                </div>
+                                </div>
+                            <div class="row mb-5">
+                                <div class="col ">
+                                    <a href="jajobajo" class="col-20 chg-color fs-3">Zwroty</a>
+                                </div>
+                            </div>
                 </div>
                 <div class="justify-content-center align-items-end  h-25 d-flex">
-                        @section('left-bar-bottom')
-                        @show
+                    @section('left-bar-bottom')
+                        <a href="bajojjajo" class="fs-4 chg-color mb-5">Wyloguj</a>
+                    @show
                 </div>
             </div>
             <div class="col-17 float-start vh-100 p-0 ">
@@ -45,7 +55,7 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-20 p-0 ">
+                        <div class="col-20 p-0 d-flex justify-content-center ">
                             @section('content')
                             @show
                         </div>
