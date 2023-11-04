@@ -10,7 +10,14 @@ class LoginController extends Controller
 {
     public function index() 
     {
-        return view('login');
+        if (auth()->user()) 
+        {
+            return redirect()->intended('/');
+        }
+        else
+        {
+            return view('login');
+        }
     }
 
     public function login(Request $request)

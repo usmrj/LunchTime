@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('username', 255);
-            $table->string('password', 255);
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('password');
             $table->unsignedBigInteger('school_id');
             $table->foreign('school_id')
             ->references('id')

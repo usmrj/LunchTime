@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Models\School;
 use App\Models\Student;
@@ -16,5 +17,11 @@ use App\Models\Student;
 */
 
 Route::get('/', function () {
-    return view('login');
-});
+    return view('stats');
+})->middleware('auth');
+
+Route::post('login', [LoginController::class, 'login'])->name('auth.login');
+
+Route::get('login', [LoginController::class, 'index'])->name('login');
+
+Route::post('logout', [LoginController::class, 'logout'])->name('auth.logout');
