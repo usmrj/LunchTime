@@ -16,6 +16,10 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->unsignedBigInteger('school_id');
+            $table->foreign('school_id')
+            ->references('id')
+            ->on('schools');
         });
     }
 
