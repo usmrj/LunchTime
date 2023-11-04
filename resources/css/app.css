@@ -1,0 +1,65 @@
+:root{
+  --main_color: #FF9142;
+  --second_color: #FFB800;
+}
+::placeholder {
+  color: var(--second_color);
+  opacity: 0.8; 
+}
+
+
+
+
+.top-bar{
+    background: linear-gradient(180deg, #4A4A4A 0%, #2E2E2E 100%);
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.25);
+    height: 100px
+  }
+  .left-bar{
+    background: linear-gradient(180deg, #2E2E2E 0%, #414141 53.65%, #363636 100%);
+    box-shadow: 11px 0px 9px 0px rgba(0, 0, 0, 0.25);
+  }
+  .background-grad{
+    background: linear-gradient(180deg, #2C2C2C 0%, #3D3D3D 100%);
+  }
+
+  .login-form-box{
+    margin: 25%;
+    background: linear-gradient(180deg, #323232 0%, #464646 48.44%, #4A4A4A 100%);
+  }
+  .login-input{
+    height: 40px;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    background: transparent;
+    color: var(--second_color);
+  }
+  .form-button{
+    margin-bottom: 25%;
+    background: transparent;
+    color: var(--second_color);
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 145, 66, 1);
+  }
+
+  .highlight:focus{
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 145, 66, 1);
+  }
+
+  .chg-color:focus{
+    color: var(--second_color);
+  }
+  .chg-color{
+    color: var(--main_color);
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+
+  input:-webkit-autofill { 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--second_color);
+}
