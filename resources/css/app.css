@@ -25,6 +25,11 @@
     margin: 25%;
     background: linear-gradient(180deg, #323232 0%, #464646 48.44%, #4A4A4A 100%);
   }
+  .text-input{
+    height: 40px;
+    background: transparent;
+    color: var(--second_color);
+  }
   .login-input{
     height: 40px;
     margin-top: 25%;
@@ -51,15 +56,19 @@
   .chg-color{
     color: var(--main_color);
   }
-  .chg-color:hover{
+  .active-tab{
     color: var(--second_color);
   }
   a{
     text-decoration: none;
   }
 
-
   input:-webkit-autofill { 
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--second_color);
+}
+
+
+.chk-box{
+background-color: transparent;
 }

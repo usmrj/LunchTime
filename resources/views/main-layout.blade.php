@@ -13,7 +13,7 @@
     }
     @endphp 
 <body>
-<div class=" vh-100 w-100 background-grad overflow-y-hidden">
+<div class=" vh-100 w-100 background-grad">                 <!-- TODO cos źle działa wyświetlanie kolorów -->
     <div class="container-fluid ">
         <div class="row">
             <div class="col-3 vh-100 left-bar">
@@ -23,6 +23,7 @@
                     @show
                 </div>
                 <div class="col-20 h-50 container">
+                    @section('left-bar-mid')
                             <div class="row mb-5">
                                 <div class="col">
                                     <span><a href="jajobajo" class="chg-color fs-3 ">Statystyki</a></span>
@@ -43,15 +44,17 @@
                                     <a href="jajobajo" class="col-20 chg-color fs-3">Zwroty</a>
                                 </div>
                             </div>
+                    @show
                 </div>
-                <div class="justify-content-center align-items-end  h-25 d-flex">
+                <div class="justify-content-center h-25 d-flex">
                     @section('left-bar-bottom')
                         @auth
                             <form action="{{ route('auth.logout') }}" method="POST">
                                 @csrf
-                                <input class="mb-5" type="submit" value="Wyloguj" />
+                                <input class="mt-5 form-button btn btn-main_color border border-3 border-main_color rounded-3 fs-3" type="submit" value="Wyloguj" />
                             </form>
                         @endauth
+                    @show
                 </div>
             </div>
             <div class="col-17 float-start vh-100 p-0 ">
@@ -59,18 +62,12 @@
                     @yield('top-bar')
                 </div>
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-20 p-0 d-flex justify-content-center ">
-                            @section('content')
-                            @show
-                        </div>
-                    </div>
+                    @yield('content')
                 </div>
             </div>
         </div>
     </div>
 </div>
-
 
 
 </body>

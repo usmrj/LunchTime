@@ -23,3 +23,12 @@ Route::post('login', [LoginController::class, 'login'])->name('auth.login');
 Route::get('login', [LoginController::class, 'index'])->name('login');
 
 Route::post('logout', [LoginController::class, 'logout'])->name('auth.logout');
+
+
+// Route::get('/stat', function () {
+//     return view('SatisfactionStat');
+// });
+
+// Route::get('/addish', function () {
+//     return view('AddDish');
+// });
