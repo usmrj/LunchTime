@@ -13,7 +13,7 @@
     }
     @endphp 
 <body>
-<div class=" vh-100 w-100 background-grad">                 <!-- TODO cos źle działa wyświetlanie kolorów -->
+<div class=" vh-100 w-100 background-grad overflow-y-hidden">                 <!-- TODO cos źle działa wyświetlanie kolorów -->
     <div class="container-fluid ">
         <div class="row">
             <div class="col-3 vh-100 left-bar">

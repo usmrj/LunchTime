@@ -14,5 +14,12 @@
 </div>
 @endsection
 @section('content')
+<div class="row">
+    <div class="col-5 d-flex ">
+          <span class="align-self-center">WIELKI RZUŁTY WIEL</span>
+    </div>
+    <div class="col-15">
 
+    </div>
+</div>
 @endsection

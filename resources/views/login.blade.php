@@ -25,15 +25,15 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-8 mx-auto justify-content-center d-flex">
+                            <div class="col-8 mx-auto justify-content-center d-flex ">
                                 <input name="login" type="text" placeholder="Login"
-                                    class="highlight login-input border border-3 border-main_color rounded-3 col-20 "><br>
+                                    class="highlight login-input border border-3 border-main_color rounded-3 col-20 pe-2 ps-2"><br>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-8 mx-auto justify-content-center d-flex">
                                 <input name="password" type="password" placeholder="Password"
-                                    class="highlight login-input border border-3 border-main_color rounded-3 col-20  "><br>
+                                    class="highlight login-input border border-3 border-main_color rounded-3 col-20 pe-2 ps-2 "><br>
                             </div>
                         </div>
                         <div class="row mt-5">
