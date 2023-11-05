@@ -11,7 +11,7 @@
 .top-bar{
     background: linear-gradient(180deg, #4A4A4A 0%, #2E2E2E 100%);
     box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.25);
-    height: 100px
+    height: 100px;
   }
   .left-bar{
     background: linear-gradient(180deg, #2E2E2E 0%, #414141 53.65%, #363636 100%);
@@ -25,6 +25,11 @@
     margin: 25%;
     background: linear-gradient(180deg, #323232 0%, #464646 48.44%, #4A4A4A 100%);
   }
+  .text-input{
+    height: 40px;
+    background: transparent;
+    color: var(--second_color);
+  }
   .login-input{
     height: 40px;
     margin-top: 25%;
@@ -33,7 +38,6 @@
     color: var(--second_color);
   }
   .form-button{
-    margin-bottom: 25%;
     background: transparent;
     color: var(--second_color);
     outline: none;
@@ -51,15 +55,38 @@
   .chg-color{
     color: var(--main_color);
   }
-  .chg-color:hover{
+  .active-tab{
     color: var(--second_color);
   }
   a{
     text-decoration: none;
   }
 
-
   input:-webkit-autofill { 
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--second_color);
 }
+
+.highlight:checked{
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 145, 66, 1);
+}
+
+select[multiple] {
+  background:#2C2C2C;
+  width:max-content;
+  height:auto;
+  outline: none;
+  padding:0;
+  margin:0;
+  border-width: 0px;
+  border: var(--main_color);
+  border-style:solid;
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist;
+  appearance: menulist;
+}
+.btn:hover{
+  color: var(--second_color);
+}
+

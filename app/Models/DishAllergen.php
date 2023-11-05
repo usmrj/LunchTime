@@ -11,6 +11,13 @@ class DishAllergen extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
+    protected $fillable = [
+        'dish_id',
+        'allergen_id'
+    ];
+
     public function dish(): BelongsTo
     {
         return $this->belongsTo(Dish::class, 'dish_id');

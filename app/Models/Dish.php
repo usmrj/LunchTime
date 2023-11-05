@@ -11,6 +11,8 @@ class Dish extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = [
         'name',
         'ingr1',
@@ -18,7 +20,8 @@ class Dish extends Model
         'ingr3',
         'ingr4',
         'ingr5',
-        'IsSecond',
+        'school_id',
+        'IsMain',
         'IsAlternative'
     ];
 
