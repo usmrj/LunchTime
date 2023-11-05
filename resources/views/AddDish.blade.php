@@ -39,7 +39,7 @@
                 </button>
                 <div class="dropdown-menu " style="background-color: transparent; border:none;"
                     aria-labelledby="dropdownMenuButton">
-                    <select class="text-input" multiple style="border:none">
+                    <select name="allergens[]" class="text-input" multiple style="border:none">
                         @foreach ($allergens as $allergen)
                         <option value="{{$allergen->id}}">{{$allergen->name}}</option>
                         @endforeach
