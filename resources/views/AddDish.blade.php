@@ -14,6 +14,8 @@
     </div>
 @endsection
 @section('content')
+    <div class="row pt-4 justify-content-center">
+        <div class="col-16 background-grad  border border-3 border-main_color rounded-3 ">
     <form action="{{ route('add-dish') }}" method="POST" class="">
         @csrf       
          <div class="row mt-5 p-2">
@@ -57,7 +59,8 @@
                     class="highlight text-input border border-3 border-main_color rounded-3 ps-2 pe-2 highlight"
                     placeholder="Składnik 3" />
 
-            </div>
+
+                    </div>
 
         </div>
         <div class="row  mt-5 p-2 justify-content-end">
@@ -72,27 +75,33 @@
                     class="highlight text-input border border-3 border-main_color rounded-3 ps-2 pe-2 highlight"
                     placeholder="Składnik 5" />
 
-            </div>
 
-        </div>
-        <div class="row mt-5 p-2 justify-content-around">
-            <div class="col-5 text-end ">
-                <input type="checkbox" name="IsMain" id="isMain" class="">
-                <span class=" chg-color fs-5"> Główne danie </span>
-            </div>
-            <div class="col-5 text-start">
-                <input type="checkbox" name="IsAlternative" id="isMain" class="">
-                <span class=" chg-color fs-5"> Dla alergików </span>
-            </div>
+                    </div>
 
-        </div>
-        <div class="row mt-5 p-2" >
-            <div class="col">
-                <input type="submit" value="Dodaj"
-                class="form-button btn btn-main_color border border-3 border-main_color rounded-3 ">
-            </div>
-        </div>
-        {{-- <div class="row mt-5 p-2">
+                </div>
+                <div class="row mt-5 p-2 justify-content-around">
+                    <div class="col-5 text-end ">
+                        <input type="checkbox" name="IsMain" id="isMain" class="btn-check">
+                        <label for="isMain"
+                            class="form-button btn btn-main_color  border border-3 border-main_color rounded-3"> Główne
+                            danie </label>
+                    </div>
+                    <div class="col-5 text-start">
+                        <input type="checkbox" name="IsAlternative" id="UPO" class="btn-check">
+                        <label for="UPO"
+                            class="form-button btn btn-main_color  border border-3 border-main_color rounded-3"> Dla
+                            alergików </label>
+                    </div>
+
+
+                </div>
+                <div class="row mt-5 p-2 justify-content-center d-flex">
+                    <div class="col-1 ">
+                        <input type="submit" value="Dodaj obiad"
+                            class="form-button btn btn-main_color border border-3 border-main_color rounded-3 ">
+                    </div>
+                </div>
+                {{-- <div class="row mt-5 p-2">
             <div class="col text-center ">
                 <span class=" chg-color fs-5"> Przyjmowany format: CSV </span>
             </div>
@@ -105,5 +114,7 @@
             </div>
 
         </div> --}}
-    </form>
+            </form>
+        </div>
+    </div>
 @endsection
