@@ -27,3 +27,6 @@ Route::post('add-dish', [DishController::class, 'create'])->name('add-dish');
 
 Route::get('add-dish', [DishController::class, 'index'])->name('add-dish');
 
+Route::get('/modify-dish', function () {
+    return view('ModifyDish');
+});

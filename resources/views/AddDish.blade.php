@@ -31,12 +31,40 @@
                 <span class=" chg-color fs-5"> Alergeny: </span>
             </div>
             <div class="col">
-                <select name="allergens[]" class="" aria-label="Default select example" multiple >
-                    @foreach ($allergens as $allergen)
-                    <option value="{{$allergen->id}}">{{$allergen->name}}</option>
-                    @endforeach
-                  </select>
+            <div class="dropdown">
+                <button class=" form-button btn border border-3 border-main_color chg-color dropdown-toggle"
+                    type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+                    Wybierz alergeny
+                </button>
+                <div class="dropdown-menu " style="background-color: transparent; border:none;"
+                    aria-labelledby="dropdownMenuButton">
+                    <select class="text-input" multiple style="border:none">
+                        @foreach ($allergens as $allergen)
+                        <option value="{{$allergen->id}}">{{$allergen->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         </div>
         <div class="row mt-5 p-2">
             <div class="col text-center align-self-center">
