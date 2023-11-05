@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DishController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,21 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('stats');
-})->middleware('auth');
-
 Route::post('login', [LoginController::class, 'login'])->name('auth.login');
 
 Route::get('login', [LoginController::class, 'index'])->name('login');
 
 Route::post('logout', [LoginController::class, 'logout'])->name('auth.logout');
 
+//  =========================== Dish Managment ===================================
 
-// Route::get('/stat', function () {
-//     return view('SatisfactionStat');
-// });
+Route::post('add-dish', [DishController::class, 'create'])->name('add-dish');
 
-// Route::get('/addish', function () {
-//     return view('AddDish');
-// });
+Route::get('add-dish', [DishController::class, 'index'])->name('add-dish');
+

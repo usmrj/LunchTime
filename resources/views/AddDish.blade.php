@@ -14,13 +14,14 @@
     </div>
 @endsection
 @section('content')
-    <form action="" method="POST" class=""> <!-- TODO: zmienic action-->
-        <div class="row mt-5 p-2">
+    <form action="{{ route('add-dish') }}" method="POST" class="">
+        @csrf       
+         <div class="row mt-5 p-2">
             <div class="col text-center align-self-center">
                 <span class=" chg-color fs-5"> Nazwa: </span>
             </div>
             <div class="col">
-                <input name=""type="text"
+                <input name="name"type="text"
                     class="highlight text-input border border-3 border-main_color rounded-3 ps-2 pe-2 highlight"
                     placeholder="Nazwa obiadu" />
             </div>
@@ -28,11 +29,10 @@
                 <span class=" chg-color fs-5"> Alergeny: </span>
             </div>
             <div class="col">
-                <select class="" aria-label="Default select example" multiple >
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
+                <select name="allergens[]" class="" aria-label="Default select example" multiple >
+                    @foreach ($allergens as $allergen)
+                    <option value="{{$allergen->id}}">{{$allergen->name}}</option>
+                    @endforeach
                   </select>
             </div>
         </div>
@@ -41,19 +41,19 @@
                 <span class=" chg-color fs-5"> Składniki: </span>
             </div>
             <div class="col">
-                <input name="DishName"type="text"
+                <input name="ingr1"type="text"
                     class="highlight text-input border border-3 border-main_color rounded-3 ps-2 pe-2 highlight"
                     placeholder="Składnik 1" />
 
             </div>
             <div class="col">
-                <input name="DishName"type="text"
+                <input name="ingr2"type="text"
                     class="highlight text-input border border-3 border-main_color rounded-3 ps-2 pe-2 highlight"
                     placeholder="Składnik 2" />
 
             </div>
             <div class="col">
-                <input name="DishName"type="text"
+                <input name="ingr3"type="text"
                     class="highlight text-input border border-3 border-main_color rounded-3 ps-2 pe-2 highlight"
                     placeholder="Składnik 3" />
 
@@ -62,13 +62,13 @@
         </div>
         <div class="row  mt-5 p-2 justify-content-end">
             <div class="col-5">
-                <input name="DishName"type="text"
+                <input name="ingr4"type="text"
                     class="highlight text-input border border-3 border-main_color rounded-3 ps-2 pe-2 highlight "
                     placeholder="Składnik 4" />
 
             </div>
             <div class="col-5">
-                <input name="DishName"type="text"
+                <input name="ingr5"type="text"
                     class="highlight text-input border border-3 border-main_color rounded-3 ps-2 pe-2 highlight"
                     placeholder="Składnik 5" />
 
@@ -77,11 +77,11 @@
         </div>
         <div class="row mt-5 p-2 justify-content-around">
             <div class="col-5 text-end ">
-                <input type="checkbox" name="isMain" id="isMain" class="">
+                <input type="checkbox" name="IsMain" id="isMain" class="">
                 <span class=" chg-color fs-5"> Główne danie </span>
             </div>
             <div class="col-5 text-start">
-                <input type="checkbox" name="isMain" id="isMain" class="">
+                <input type="checkbox" name="IsAlternative" id="isMain" class="">
                 <span class=" chg-color fs-5"> Dla alergików </span>
             </div>
 

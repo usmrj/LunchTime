@@ -34,7 +34,7 @@ class School extends Model
         return $this->hasMany(servedDish::class);
     }
 
-    public function previlagedUsers(): HasMany
+    public function Users(): HasMany
     {
         return $this->hasMany(User::class);
     }
