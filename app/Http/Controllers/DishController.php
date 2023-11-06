@@ -21,6 +21,11 @@ class DishController extends Controller
         ]);
     }
 
+    public function indexEdit()
+    {
+        return view('ModifyDish');
+    }
+
     public function create(Request $request)
     {
         $schoolId = User::where('id', Auth::id())->value('school_id');
@@ -60,6 +65,6 @@ class DishController extends Controller
             $DishAllergen->save();
         }
 
-        return redirect()->route('add-dish')->with('success', 'Pomyślnie dodano publikację');
+        return redirect()->route('add-dish')->with('success', 'Pomyślnie dodano obiad: ' . $newDish['name'] . ''); // redirect somewhere 
     }
 }

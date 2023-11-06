@@ -23,10 +23,8 @@ Route::post('logout', [LoginController::class, 'logout'])->name('auth.logout');
 
 //  =========================== Dish Managment ===================================
 
-Route::post('add-dish', [DishController::class, 'create'])->name('add-dish');
+Route::post('add-dish', [DishController::class, 'create'])->name('add-dish')->middleware('auth');
 
-Route::get('add-dish', [DishController::class, 'index'])->name('add-dish');
+Route::get('add-dish', [DishController::class, 'index'])->name('add-dish')->middleware('auth');
 
-Route::get('/modify-dish', function () {
-    return view('ModifyDish');
-});
+Route::get('modify-dish', [DishController::class, 'indexEdit'])->name('modify-dish')->middleware('auth');
