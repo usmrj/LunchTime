@@ -27,4 +27,6 @@ Route::post('add-dish', [DishController::class, 'create'])->name('add-dish')->mi
 
 Route::get('add-dish', [DishController::class, 'index'])->name('add-dish')->middleware('auth');
 
+Route::post('modify-dish', [DishController::class, 'edit'])->name('modify-dish')->middleware('auth');
+
 Route::get('modify-dish', [DishController::class, 'indexEdit'])->name('modify-dish')->middleware('auth');
