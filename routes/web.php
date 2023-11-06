@@ -30,3 +30,10 @@ Route::get('add-dish', [DishController::class, 'index'])->name('add-dish');
 Route::get('/modify-dish', function () {
     return view('ModifyDish');
 });
+
+Route::get('/add', function () {
+    return view('ModifyDish');
+});
+Route::get('/refunds', function () {
+    return view('ProcessedRefunds');
+});

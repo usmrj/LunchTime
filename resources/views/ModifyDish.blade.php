@@ -3,19 +3,19 @@
     <div class="row h-100 g-0">
 
         <a class="col d-flex justify-content-center"> <!-- TODO: ZMIENIC HREF -->
-            <span class="fs-4 chg-color align-self-center"> Dodaj obiad do bazy</span>
+            <span class="fs-3 chg-color align-self-center"> Dodaj obiad do bazy</span>
         </a>
         <a class="col chg-color d-flex justify-content-center"> <!-- TODO: ZMIENIC HREF -->
-            <span class="fs-4 chg-color align-self-center">Modyfikuj menu</span>
+            <span class="fs-3 chg-color align-self-center">Modyfikuj menu</span>
         </a>
         <a class="col chg-color d-flex justify-content-center border-bottom border-5 border-main_color">
             <!-- TODO: ZMIENIC HREF -->
-            <span class="fs-4 chg-color active-tab align-self-center"> Modyfikuj obiad </span>
+            <span class="fs-3 chg-color active-tab align-self-center"> Modyfikuj obiad </span>
         </a>
     </div>
 @endsection
 @section('content')
-    <div class="row pt-4 justify-content-center">
+    <div class="row justify-content-center">
         <div class="col-16 background-grad  border border-3 border-main_color rounded-3 ">
             <form action="" method="POST" > <!-- TODO: zmienic action-->
                 <div class="row pt-3 justify-content-center">
@@ -49,9 +49,12 @@
                             </button>
                             <div class="dropdown-menu " style="background-color: transparent; border:none;"
                                 aria-labelledby="dropdownMenuButton">
-                                <select class="text-input" multiple style="overflow-y: hidden; border:none">
-                                    <option value="1" class=" border border-1 border-main_color">One</option>
-                                    <option value="2">PIERDGSYUDGFSHDGFJSJ</option>
+                                <select class="text-input" multiple style="border: none">
+                                    <option value="1" >One</option>
+                                    <option value="2">PIERDGSYUDGFSHDGFJSJ</option>        
+                                    <option value="3">Three</option>
+                                    <option value="1" >One</option>
+                                    <option value="2">PIERDGSYUDGFSHDGFJSJ</option>        
                                     <option value="3">Three</option>
                                 </select>
                             </div>
