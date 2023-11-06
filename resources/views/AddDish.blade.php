@@ -14,13 +14,12 @@
     </div>
 @endsection
 @section('content')
-
 @if(session('success'))
     <div class="text-white text-center mt-4">
         <h3>{{ session('success') }}</h3>
     </div>
 @endif
-    <div class="row pt-4 justify-content-center">
+    <div class="row  justify-content-center">
         <div class="col-16 background-grad  border border-3 border-main_color rounded-3 ">
     <form action="{{ route('add-dish') }}" method="POST" class="">
         @csrf       
@@ -53,24 +52,6 @@
                 </div>
             </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
         <div class="row mt-5 p-2">
             <div class="col text-center align-self-center">

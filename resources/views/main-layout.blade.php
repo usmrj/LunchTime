@@ -61,7 +61,7 @@
                 <div class="top-bar border-bottom border-2 border-main_color">
                     @yield('top-bar')
                 </div>
-                <div class="container-fluid">
+                <div class="container-fluid h-100 mt-5">
                     @yield('content')
                 </div>
             </div>

@@ -30,3 +30,11 @@ Route::get('add-dish', [DishController::class, 'index'])->name('add-dish')->midd
 Route::post('modify-dish', [DishController::class, 'edit'])->name('modify-dish')->middleware('auth');
 
 Route::get('modify-dish', [DishController::class, 'indexEdit'])->name('modify-dish')->middleware('auth');
+
+Route::get('/refunds/done', function () {
+    return view('ProcessedRefunds');
+});
+Route::get('/refunds/wait', function () {
+    return view('WaitingRefunds');
+});
+
