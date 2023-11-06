@@ -17,9 +17,9 @@ return new class extends Migration
             $table->foreign('student_id')
             ->references('id')
             ->on('students');
-            $table->integer('amount');
+            $table->float('amount');
             $table->date('ask_for_refund_date');
-            $table->date('refund_finished_date');
+            $table->date('refund_finished_date')->nullable();
             $table->tinyInteger('status');
         });
     }

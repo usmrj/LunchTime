@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DishController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RefundController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,10 +32,10 @@ Route::post('modify-dish', [DishController::class, 'edit'])->name('modify-dish')
 
 Route::get('modify-dish', [DishController::class, 'indexEdit'])->name('modify-dish')->middleware('auth');
 
-Route::get('/refunds/done', function () {
-    return view('ProcessedRefunds');
-});
-Route::get('/refunds/wait', function () {
-    return view('WaitingRefunds');
-});
+// =========================== Refund Managment ===================================
 
+Route::get('refunds/done', [RefundController::class, 'indexDone'])->name('refund-done')->middleware('auth');
+
+Route::post('refunds/wait', [RefundController::class, 'finishRefund'])->name('refund-wait')->middleware('auth');
+
+Route::get('refunds/wait', [RefundController::class, 'indexWait'])->name('refund-wait')->middleware('auth');

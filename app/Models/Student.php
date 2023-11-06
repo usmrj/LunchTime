@@ -22,7 +22,7 @@ class Student extends Model
 
     public function classes(): BelongsTo
     {
-        return $this->belongsTo(Classes::class, 'class_id');
+        return $this->belongsTo(Classes::class, 'class_id', 'id');
     }
 
     public function school(): BelongsTo
@@ -53,5 +53,10 @@ class Student extends Model
     public function studentRewards(): HasMany
     {
         return $this->hasMany(StudentReward::class);
+    }
+
+    public function refunds(): HasMany
+    {
+        return $this->hasMany(Refund::class);
     }
 }
