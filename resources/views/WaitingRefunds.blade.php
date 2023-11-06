@@ -76,7 +76,7 @@
 </div>
 <div class="row h-25 justify-content-center">
     <div class="col-5 align-self-center">
-        <input type="submit" class="form-button border border-3 border-main_color rounded-3 fs-3" value="Zatwierdź zwroty">
+        <input type="submit" class="mt-5 form-button btn btn-main_color border border-3 border-main_color rounded-3 fs-3" value="Zatwierdź zwroty">
     </div>
 </div>
 </form>
