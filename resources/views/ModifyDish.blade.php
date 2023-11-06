@@ -15,6 +15,11 @@
     </div>
 @endsection
 @section('content')
+@if(session('success'))
+    <div class="text-white text-center mt-4">
+        <h3>{{ session('success') }}</h3>
+    </div>
+@endif
     <div class="row justify-content-center">
         <div class="col-16 background-grad  border border-3 border-main_color rounded-3 ">
             <form action="" method="POST" > <!-- TODO: zmienic action-->
@@ -124,17 +129,7 @@
                 {{-- <div class="row mt-5 p-2">
         <div class="col text-center ">
             <span class=" chg-color fs-5"> Przyjmowany format: CSV </span>
-        </div>
+        </div>   
+@livewire('modify-dish-screen')
 
-    </div>
-    <div class="row p-2 justify-content-center">
-        <div class="col-5 ">
-            <input type="submit" value="Importuj"
-            class="form-button btn btn-main_color border border-3 border-main_color rounded-3 ">            <!-- TODO: jak będzie czas-->
-        </div>
-
-    </div> --}}
-            </form>
-        </div>
-    </div>
 @endsection
