@@ -14,47 +14,53 @@
     </div>
 @endsection
 @section('content')
-<form action="" method="POST">
+@if(session('success'))
+    <div class="text-main_color text-center ">
+        <h3>{{ session('success') }}</h3>
+    </div>
+@endif
+<form action="{{ route('modify-menu') }}" method="POST">
+    @csrf
     <div class="row vh-100 justify-content-center ">
         <div class="col-4 d-flex justify-content-end h-75">
-            <select class="text-input form-button text-center border border-3 border-main_color rounded-3  align-self-center"
+            <select name="month" class="text-input form-button text-center border border-3 border-main_color rounded-3  align-self-center"
                  id="monthSelect" onchange="days()" required>
                 <option value="" disabled selected hidden>Wybierz miesiąc</option>
-                <option value="9" >Wrzesień</option>
+                <option value="09" >Wrzesień</option>
                 <option value="10">Październik</option>
                 <option value="11">Listopad</option>
                 <option value="12">Grudzień</option>
-                <option value="1">Styczeń</option>
-                <option value="2">Luty</option>
-                <option value="3">Marzec</option>
-                <option value="4">Kwiecień</option>
-                <option value="5">Maj</option>
-                <option value="6">Czerwiec</option>
+                <option value="01">Styczeń</option>
+                <option value="02">Luty</option>
+                <option value="03">Marzec</option>
+                <option value="04">Kwiecień</option>
+                <option value="05">Maj</option>
+                <option value="06">Czerwiec</option>
             </select>
         </div>
         <div class="col-2 d-flex justify-content-center h-75">
-            <select name="" id="daySelect" class="text-input form-button text-center border border-3 border-main_color rounded-3 align-self-center" required>
+            <select name="day" id="daySelect" class="text-input form-button text-center border border-3 border-main_color rounded-3 align-self-center" required>
                 <option value="" disabled selected hidden>Wybierz dzień</option>
             </select>
         </div>
         <div class="col-10   h-75">
         <div class="row align-items-center h-50">
             <div class="col justify-content-center d-flex">
-                <input required list="MainDish" name="browser" id="Main" placeholder="Wybierz główne danie" class=" ps-2 text-input active-tab border border-1 border-main_color rounded-3 form-button highlight">
+                <input required list="MainDish" name="MainDish" id="Main" placeholder="Wybierz główne danie" class=" ps-2 text-input active-tab border border-1 border-main_color rounded-3 form-button highlight">
                 <datalist id="MainDish">
-                    {{-- @foreach ($MainDishes as $Dish)
-                    <option value={{$Dish}}>                 
-                    @endforeach --}}
+                    @foreach ($MainDishes as $Dish)
+                        <option value="{{$Dish['name']}}">
+                    @endforeach
                 </datalist>
             </div>
         </div>
         <div class="row align-items-center h-50">
             <div class="col justify-content-center d-flex">
-                <input required list="SecondDish" name="browser" id="Second" placeholder="Wybierz zupę" class=" ps-2 text-input active-tab border border-1 border-main_color rounded-3 form-button highlight">
+                <input required list="SecondDish" name="SecondDish" id="Second" placeholder="Wybierz zupę" class=" ps-2 text-input active-tab border border-1 border-main_color rounded-3 form-button highlight">
                 <datalist id="SecondDish">
-                    {{-- @foreach ($MainDishes as $Dish)
-                    <option value={{$Dish}}>                 
-                    @endforeach --}}            
+                    @foreach ($SecondDishes as $Dish)
+                    <option value="{{$Dish['name']}}">                 
+                    @endforeach            
                 </datalist>
             </div>
         </div>
