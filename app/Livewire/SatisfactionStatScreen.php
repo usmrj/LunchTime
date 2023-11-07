@@ -25,6 +25,7 @@ class SatisfactionStatScreen extends Component
     public $bad2;
     public $dates = null;
     public $dishes = null;
+    public $error;
 
 
     public function render()
@@ -72,6 +73,7 @@ class SatisfactionStatScreen extends Component
 
     public function handleChangeDate()
     {
+        $this->dishes = null;
         if($this->selectedOption ==  ""){ return; }
         $servedDish = ServedDish::where('serving_date', $this->selectedOption)
         ->where('school_id', $this->schoolId)

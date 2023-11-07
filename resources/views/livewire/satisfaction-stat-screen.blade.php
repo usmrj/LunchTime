@@ -39,7 +39,11 @@
             </select>
         @endif
         @if (isset($good2) && isset($bad2) && isset($middle2) && isset($dishes))
-        <h5 class="text-white">Obiady z tego dnia to: <b>{{ $dishes[0]['name'] }}</b> i <b>{{ $dishes[1]['name']}}</b></h2>
+            @if (isset($dishes[1]))
+                <h5 class="text-white">Obiady z tego dnia to: <b>{{ $dishes[0]['name'] }}</b> i <b>{{ $dishes[1]['name']}}</b></h2>
+            @else
+                <h5 class="text-white">Obiad z tego dnia to: <b>{{ $dishes[0]['name'] }}</b></h2>
+            @endif
         <p class="text-white">dobre obiady {{ $good2 }}</p><br>
         <p class="text-white">średnie obiady {{ $middle2 }}</p><br>
         <p class="text-white">słabe obiady {{ $bad2 }}</p><br>
