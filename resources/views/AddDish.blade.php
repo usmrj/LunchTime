@@ -1,19 +1,19 @@
 @extends('main-layout')
 @section('top-bar')
     <div class="row h-100 g-0">
-        <a href="" class="col d-flex justify-content-center border-bottom border-5 border-main_color">
-            <!-- TODO: ZMIENIC HREF -->
+        <a class="col d-flex justify-content-center border-bottom border-5 border-main_color">
             <span class="fs-4 chg-color active-tab  align-self-center"> Dodaj obiad do bazy</span>
         </a>
         <a class="col chg-color d-flex justify-content-center"> <!-- TODO: ZMIENIC HREF -->
             <span class="fs-4 chg-color align-self-center"> Modyfikuj menu</span>
         </a>
-        <a class="col chg-color d-flex justify-content-center"> <!-- TODO: ZMIENIC HREF -->
+        <a href="{{ route('modify-dish') }}" class="col chg-color d-flex justify-content-center">
             <span class="fs-4 chg-color align-self-center"> Modyfikuj obiad </span>
         </a>
     </div>
 @endsection
 @section('content')
+
 @if(session('success'))
     <div class="text-main_color text-center ">
         <h3>{{ session('success') }}</h3>

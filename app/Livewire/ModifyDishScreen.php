@@ -38,6 +38,6 @@ class ModifyDishScreen extends Component
               ->get()->toArray();
         $this->dishAllergens = DishAllergen::where('dish_id', $this->data[0]['id'])->pluck('allergen_id')->toArray();
         $this->readOnly = null;
-
+        
     }
 }
