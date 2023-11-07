@@ -11,8 +11,12 @@ class ServedDish extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     protected $fillable = [
-        'name',
+        'serving_date',
+        'dish_id',
+        'school_id'
     ];
 
     public function school(): BelongsTo

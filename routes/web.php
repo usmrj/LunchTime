@@ -33,6 +33,10 @@ Route::post('modify-dish', [DishController::class, 'edit'])->name('modify-dish')
 
 Route::get('modify-dish', [DishController::class, 'indexEdit'])->name('modify-dish')->middleware('auth');
 
+Route::post('modify-menu', [DishController::class, 'addToMenu'])->name('modify-menu')->middleware('auth');
+
+Route::get('modify-menu', [DishController::class, 'indexMenu'])->name('modify-menu')->middleware('auth');
+
 // =========================== Refund Managment ===================================
 
 Route::get('refunds/done', [RefundController::class, 'indexDone'])->name('refund-done')->middleware('auth');
@@ -44,3 +48,5 @@ Route::get('refunds/wait', [RefundController::class, 'indexWait'])->name('refund
 // =========================== Statistics Managment ===================================
 
 Route::get('/', [StatisticsController::class, 'indexSatisfaction'])->name('Satisfaction')->middleware('auth');
+
+
