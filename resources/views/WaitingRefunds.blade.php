@@ -69,7 +69,6 @@
         </div>
         <div class="col-3 border-bottom border-2 border-main_color text-center">
             <span class=" chg-color fs-4 ">{{ $refund->ask_for_refund_date }}</span>
-
         </div>
     </div>
     @endforeach

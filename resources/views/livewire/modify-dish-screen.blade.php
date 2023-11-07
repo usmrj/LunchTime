@@ -21,7 +21,7 @@
         $IsAlternative = $data[0]['IsAlternative'] ? 'checked' : null;
     }
 @endphp
-<div class="row pt-4 justify-content-center">
+<div class="row pt-4 h-75 justify-content-center">
     <div class="col-16 background-grad  border border-3 border-main_color rounded-3 ">
         <form action="{{ route('modify-dish') }}" method="POST" > <!-- TODO: zmienic action-->
             @csrf

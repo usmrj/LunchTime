@@ -100,8 +100,6 @@ option{
   color: var(--second_color);
 } */
 
-
-
 ::-webkit-scrollbar-thumb{
   background-color: var(--second_color);
   border-radius: 15px;

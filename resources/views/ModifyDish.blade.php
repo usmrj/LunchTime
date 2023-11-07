@@ -16,7 +16,7 @@
 @section('content')
 
 @if(session('success'))
-    <div class="text-white text-center mt-4">
+    <div class="text-main_color text-center ">
         <h3>{{ session('success') }}</h3>
     </div>
 @endif
