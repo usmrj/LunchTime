@@ -21,12 +21,7 @@
                     @section('left-bar-mid')
                             <div class="row mb-5">
                                 <div class="col">
-                                    <span><a href="jajobajo" class="chg-color fs-3 ">Statystyki</a></span> <!-- TODO: ZMIENIC HREF -->
-                                </div>
-                            </div>
-                            <div class="row mb-5">
-                                <div class="col ">
-                                    <a href="jajobajo" class="col-20 chg-color fs-3">Użytkownicy</a> <!-- TODO: ZMIENIC HREF -->
+                                    <span><a href="{{ route('satisfaction') }}" class="chg-color fs-3 ">Statystyki</a></span>
                                 </div>
                             </div>
                             <div class="row mb-5">

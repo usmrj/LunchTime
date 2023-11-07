@@ -47,6 +47,6 @@ Route::get('refunds/wait', [RefundController::class, 'indexWait'])->name('refund
 
 // =========================== Statistics Managment ===================================
 
-Route::get('/', [StatisticsController::class, 'indexSatisfaction'])->name('Satisfaction')->middleware('auth');
+Route::get('/', [StatisticsController::class, 'indexSatisfaction'])->name('satisfaction')->middleware('auth');
 
 

@@ -4,7 +4,7 @@
         <a class="col d-flex justify-content-center border-bottom border-5 border-main_color">
             <span class="fs-4 chg-color active-tab  align-self-center"> Dodaj obiad do bazy</span>
         </a>
-        <a class="col chg-color d-flex justify-content-center"> <!-- TODO: ZMIENIC HREF -->
+        <a href="{{ route('modify-menu') }}" class="col chg-color d-flex justify-content-center">
             <span class="fs-4 chg-color align-self-center"> Modyfikuj menu</span>
         </a>
         <a href="{{ route('modify-dish') }}" class="col chg-color d-flex justify-content-center">
