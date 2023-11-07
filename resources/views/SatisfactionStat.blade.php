@@ -14,4 +14,6 @@
 @endsection
 @section('content')
 
+@livewire('satisfaction-stat-screen')
+
 @endsection

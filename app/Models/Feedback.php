@@ -17,7 +17,7 @@ class Feedback extends Model
 
     public function dish(): BelongsTo
     {
-        return $this->belongsTo(Dish::class, 'dish_id');
+        return $this->belongsTo(Dish::class, 'dish_id', 'id');
     }
 
     public function school(): BelongsTo
