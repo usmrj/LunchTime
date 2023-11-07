@@ -36,7 +36,7 @@
                             </div>
                             <div class="row mb-5">
                                 <div class="col">
-                                    <a href="jajobajo" class="col-20 chg-color fs-3">Menu</a>
+                                    <a href="jajobajo" class=" chg-color fs-3">Menu</a>
                                 </div>
                                 </div>
                             <div class="row mb-5">
@@ -69,7 +69,7 @@
     </div>
 </div>
 
-
 </body>
+@stack('scripts')
 
 </html>

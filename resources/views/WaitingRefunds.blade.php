@@ -39,7 +39,6 @@
         </div>
     </div>  
     <div class="overflow-y-auto h-50">
-        
     {{-- @foreach ($refunds as $refund)
     <div class="row mb-4 g-0 justify-content-center">
             <div class="col-1 border-bottom border-2 border-main_color">
@@ -56,19 +55,15 @@
         </div>
         <div class="col-3 border-bottom border-2 border-main_color text-center">
             <span class=" chg-color fs-4 ">{{ $refund->nazwisko }}</span>
-
         </div>
         <div class="col-3 border-bottom border-2 border-main_color text-center">
             <span class=" chg-color fs-4 ">{{ $refund->klasa }}</span>
-
         </div>
         <div class="col-3 border-bottom border-2 border-main_color text-center">
             <span class=" chg-color fs-4 ">{{ $refund->kwota }}</span>
-
         </div>
         <div class="col-3 border-bottom border-2 border-main_color text-center">
             <span class=" chg-color fs-4 ">{{ $refund->data }}</span>
-
         </div>
     </div>
 @endforeach --}}

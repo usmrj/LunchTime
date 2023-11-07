@@ -14,11 +14,13 @@
     </div>
 @endsection
 @section('content')
-    <div class="row vh-100 " >
-        <div class="col-5 d-flex justify-content-center pe-5">
-            <select class="text-input form-button text-center border border-3 border-main_color rounded-3 align-self-center"
-                style="max-width: 150px" {{-- wire:model="month"--}} >
-                <option value="9">Wrzesień</option>
+<form action="" method="POST">
+    <div class="row vh-100 justify-content-center ">
+        <div class="col-4 d-flex justify-content-end h-75">
+            <select class="text-input form-button text-center border border-3 border-main_color rounded-3  align-self-center"
+                 id="monthSelect" onchange="days()" required>
+                <option value="" disabled selected hidden>Wybierz miesiąc</option>
+                <option value="9" >Wrzesień</option>
                 <option value="10">Październik</option>
                 <option value="11">Listopad</option>
                 <option value="12">Grudzień</option>
@@ -30,64 +32,73 @@
                 <option value="6">Czerwiec</option>
             </select>
         </div>
-        <div class="col-15 ">
-            {{-- <div>
-                <!-- Previous code here -->
-            
-                <div class="row">
-                    @php
-                        $daysInMonth = 20; // Replace with the actual number of working days
-                        $startDay = 3; // Replace with the starting day of the month
-                    @endphp
-            
-                    @for ($day = 1; $day <= $daysInMonth; $day++)
-                        @if ($day >= $startDay && $day <= $startDay + 4)
-                            <div class="col-2">
-                                <div class="box border border-3 border-main_color" style="background-color:#2C2C2C">
-                                    <!-- Display the day and dishes -->
-                                    <p class="day-label">Day {{ $day }}</p>
-                                    <div class="box-content">
-                                        <div wire:click="toggleDishes({{ $day }})" class="clickable">Main Dish: @if ($selectedDishes[$day] === 'Main') Soup @else Main @endif</div>
-                                        <div wire:click="toggleDishes({{ $day }})" class="clickable">Soup Dish: @if ($selectedDishes[$day] === 'Main') Main @else Soup @endif</div>
-                                        <div wire:mouseover="showAllergens({{ $day }})" class="hoverable">Hover for Allergens</div>
-                                        <div wire:drag="handleDrag({{ $day }})" wire:drop.prevent wire:loading.remove class="add-dish clickable">Add Dishes</div>
-                                        <div wire:dblclick="showAddDishForm({{ $day }})" class="dblclickable">Double-click to Add</div>
-                                    </div>
-                                </div>
-                            </div>
-                        @else
-                            <div class="col-2" style="background: transparent;"></div>
-                        @endif
-                        @if ($day % 5 == 0)
-                            </div>
-                            <div class="row">
-                        @endif
-                    @endfor
-                </div>
+        <div class="col-2 d-flex justify-content-center h-75">
+            <select name="" id="daySelect" class="text-input form-button text-center border border-3 border-main_color rounded-3 align-self-center" required>
+                <option value="" disabled selected hidden>Wybierz dzień</option>
+            </select>
+        </div>
+        <div class="col-10   h-75">
+        <div class="row align-items-center h-50">
+            <div class="col justify-content-center d-flex">
+                <input required list="MainDish" name="browser" id="Main" placeholder="Wybierz główne danie" class=" ps-2 text-input active-tab border border-1 border-main_color rounded-3 form-button highlight">
+                <datalist id="MainDish">
+                    {{-- @foreach ($MainDishes as $Dish)
+                    <option value={{$Dish}}>                 
+                    @endforeach --}}
+                </datalist>
             </div>
-            
-            @if ($addDishFormVisible)
-                <div class="add-dish-form">
-                    <div>
-                        <label for="mainDish">Main Dish:</label>
-                        <select id="mainDish" wire:model="selectedDishes[{{ $selectedDayToAddDish }}]">
-                            <option value="Main">Main Dish Option 1</option>
-                            <option value="Soup">Main Dish Option 2</option>
-                            <!-- Add more options for Main dishes here -->
-                        </select>
-                
-                        <label for="soupDish">Soup Dish:</label>
-                        <select id="soupDish" wire:model="selectedDishes[{{ $selectedDayToAddDish }}]">
-                            <option value="Main">Soup Dish Option 1</option>
-                            <option value="Soup">Soup Dish Option 2</option>
-                            <!-- Add more options for Soup dishes here -->
-                        </select>
-                
-                        <button wire:click="addDishToDay({{ $selectedDayToAddDish }})">Add</button>
-                    </div>
-                </div>
-            @endif
-            </div> --}}
+        </div>
+        <div class="row align-items-center h-50">
+            <div class="col justify-content-center d-flex">
+                <input required list="SecondDish" name="browser" id="Second" placeholder="Wybierz zupę" class=" ps-2 text-input active-tab border border-1 border-main_color rounded-3 form-button highlight">
+                <datalist id="SecondDish">
+                    {{-- @foreach ($MainDishes as $Dish)
+                    <option value={{$Dish}}>                 
+                    @endforeach --}}            
+                </datalist>
+            </div>
+        </div>
+        </div>
+        <div class="col-4 d-flex justify-content-start h-75">
+            <input type="submit" value="Dodaj danie"
+                class="text-input form-button border border-3 border-main_color rounded-3 align-self-center">
         </div>
     </div>
+</form>
+@push('scripts')
+
+
+<script>
+    function daysInMonth (month, year) {
+    return new Date(year, month, 0).getDate();
+}
+        days = () =>{
+        const date = new Date();
+        let currYear = date.getFullYear();
+        let month = document.getElementById("monthSelect");
+        let select = document.getElementById("daySelect");
+        select.innerHTML = ""
+        let monthVal = month.options[month.selectedIndex].value;
+        let daysNum;
+        if (monthVal>8) {
+            daysNum = daysInMonth(monthVal,currYear);
+            for (let index = 1; index < daysNum+1; index++) {
+                let option = document.createElement("option");
+                option.innerHTML = index;
+                option.value = index;
+                select.appendChild(option);
+            }
+            }
+        else{
+            daysNum = daysInMonth(monthVal,currYear+1);
+            for (let index = 1; index < daysNum+1; index++) {
+                let option = document.createElement("option");
+                option.innerHTML = index;
+                option.value = index;
+                select.appendChild(option);
+            }
+        }
+    }
+</script>
+@endpush
 @endsection

@@ -13,9 +13,9 @@
 @endsection
 
 @section('content')
-    <div class="row">
+    <div class="row h-75">
         <div class="col-20 p-0 d-flex justify-content-center ">
-            <div class="col-6 position-absolute mt-5 border h-75 border-4 rounded-5 border-main_color login-form-box">
+            <div class="col-6 position-absolute mt-5 border  border-4 rounded-5 border-main_color login-form-box">
                 <form action="{{ route('auth.login') }}" method="POST" class="">
                     @csrf
                     <div class="container-fluid">
@@ -36,7 +36,7 @@
                                     class="highlight login-input border border-3 border-main_color rounded-3 col-20 pe-2 ps-2 "><br>
                             </div>
                         </div>
-                        <div class="row mt-5">
+                        <div class="row mb-5">
                             <div class="col-8 mx-auto justify-content-center d-flex">
                                 <input type="submit" value="Zaloguj się"
                                     class="form-button btn btn-main_color border border-3 border-main_color rounded-3 ">

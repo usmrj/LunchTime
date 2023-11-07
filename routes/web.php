@@ -37,4 +37,7 @@ Route::get('/refunds/done', function () {
 Route::get('/refunds/wait', function () {
     return view('WaitingRefunds');
 });
+Route::get('/mod', function () {
+    return view('ModifyMenu');
+});
 

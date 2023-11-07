@@ -15,11 +15,11 @@
 @endsection
 @section('content')
 @if(session('success'))
-    <div class="text-white text-center mt-4">
+    <div class="text-main_color text-center ">
         <h3>{{ session('success') }}</h3>
     </div>
 @endif
-    <div class="row  justify-content-center">
+    <div class="row h-75 justify-content-center">
         <div class="col-16 background-grad  border border-3 border-main_color rounded-3 ">
     <form action="{{ route('add-dish') }}" method="POST" class="">
         @csrf       
@@ -73,8 +73,6 @@
                 <input name="ingr3"type="text"
                     class="highlight text-input border border-3 border-main_color rounded-3 ps-2 pe-2 highlight"
                     placeholder="Składnik 3" />
-
-
                     </div>
 
         </div>
