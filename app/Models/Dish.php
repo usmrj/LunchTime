@@ -25,9 +25,9 @@ class Dish extends Model
         'IsAlternative'
     ];
 
-    public function servedDish(): BelongsTo
+    public function servedDishes(): HasMany
     {
-        return $this->belongsTo(servedDish::class, 'dish_id');
+        return $this->hasMany(ServedDish::class);
     }
 
     public function feedbacks(): HasMany
