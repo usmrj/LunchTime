@@ -61,6 +61,10 @@
     text-decoration: none;
   }
 
+  a:hover {
+    color: rgb(243, 181, 24);
+  }
+
   input:-webkit-autofill { 
     -webkit-background-clip: text;
     -webkit-text-fill-color: var(--second_color);

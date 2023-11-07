@@ -3,6 +3,7 @@
 use App\Http\Controllers\DishController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RefundController;
+use App\Http\Controllers\StatisticsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,3 +40,7 @@ Route::get('refunds/done', [RefundController::class, 'indexDone'])->name('refund
 Route::post('refunds/wait', [RefundController::class, 'finishRefund'])->name('refund-wait')->middleware('auth');
 
 Route::get('refunds/wait', [RefundController::class, 'indexWait'])->name('refund-wait')->middleware('auth');
+
+// =========================== Statistics Managment ===================================
+
+Route::get('/', [StatisticsController::class, 'indexSatisfaction'])->name('Satisfaction')->middleware('auth');

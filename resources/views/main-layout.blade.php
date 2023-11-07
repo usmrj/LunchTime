@@ -7,11 +7,6 @@
     @yield('head')
 @show
 </head>
-    @php
-    if (str_contains(url()->current(), "login"))
-    {
-    }
-    @endphp 
 <body>
 <div class=" vh-100 w-100 background-grad overflow-y-hidden">                 <!-- TODO cos źle działa wyświetlanie kolorów -->
     <div class="container-fluid ">
@@ -26,22 +21,22 @@
                     @section('left-bar-mid')
                             <div class="row mb-5">
                                 <div class="col">
-                                    <span><a href="jajobajo" class="chg-color fs-3 ">Statystyki</a></span>
+                                    <span><a href="jajobajo" class="chg-color fs-3 ">Statystyki</a></span> <!-- TODO: ZMIENIC HREF -->
                                 </div>
                             </div>
                             <div class="row mb-5">
                                 <div class="col ">
-                                    <a href="jajobajo" class="col-20 chg-color fs-3">Użytkownicy</a>
+                                    <a href="jajobajo" class="col-20 chg-color fs-3">Użytkownicy</a> <!-- TODO: ZMIENIC HREF -->
                                 </div>
                             </div>
                             <div class="row mb-5">
                                 <div class="col">
-                                    <a href="jajobajo" class="col-20 chg-color fs-3">Menu</a>
+                                    <a href="{{ route('add-dish') }}" class="col-20 chg-color fs-3">Menu</a>
                                 </div>
                                 </div>
                             <div class="row mb-5">
                                 <div class="col ">
-                                    <a href="jajobajo" class="col-20 chg-color fs-3">Zwroty</a>
+                                    <a href="{{ route('refund-wait') }}" class="col-20 chg-color fs-3">Zwroty</a>
                                 </div>
                             </div>
                     @show

@@ -1,10 +1,10 @@
 @extends('main-layout')
 @section('top-bar')
     <div class="row h-100 g-0">
-        <a class="col d-flex justify-content-center "> <!-- TODO: ZMIENIC HREF -->
+        <a href="{{ route('refund-wait') }}" class="col d-flex justify-content-center "> <!-- TODO: ZMIENIC HREF -->
             <span class="fs-2 chg-color align-self-center"> Oczekujące zwroty</span>
         </a>
-        <a class="col  d-flex justify-content-center border-bottom border-5 border-main_color"> <!-- TODO: ZMIENIC HREF -->
+        <a class="col  d-flex justify-content-center border-bottom border-5 border-main_color">
             <span class="fs-2 chg-color active-tab  align-self-center"> Przetworzone zwroty</span>
         </a>
     </div>
